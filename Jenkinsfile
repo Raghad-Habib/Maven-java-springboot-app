@@ -3,14 +3,14 @@ pipeline {
 
     environment {
 
-        AWS_ACCESS_KEY_ID     = credentials('Noura-aws-secret-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('Noura-aws-secret-access-key')
+        AWS_ACCESS_KEY_ID     = credentials('aws-access-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
 
-        AWS_S3_BUCKET = "maven-springboot"
-        ARTIFACT_NAME = "maven-springboot.jar"
-        AWS_EB_APP_NAME = "springboot-maven"
+        AWS_S3_BUCKET = "teamcity-artifact-bucket"
+        ARTIFACT_NAME = "springboot.jar"
+        AWS_EB_APP_NAME = "teamcity-maven-app"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Springbootmaven-env"
+        AWS_EB_ENVIRONMENT = "Teamcitymavenapp-env"
 
 
     }
